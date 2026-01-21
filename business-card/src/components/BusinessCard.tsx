@@ -1,62 +1,119 @@
 import type { JSX } from 'react'
+import { PDFDownloadLink } from '@react-pdf/renderer'
+import { BusinessCardPDF } from './BusinessCardPDF'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
-const badges: Array<{ name: string; url: string }> = [
-  {
-    name: 'React',
-    url: 'https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black',
-  },
-  {
-    name: 'TypeScript',
-    url: 'https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white',
-  },
-  {
-    name: 'TailwindCSS',
-    url: 'https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white',
-  },
-  {
-    name: 'Shadcn',
-    url: 'https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white',
-  },
-  {
-    name: 'Node.js',
-    url: 'https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white',
-  },
-  {
-    name: 'NestJS',
-    url: 'https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white',
-  },
-  {
-    name: 'Go',
-    url: 'https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white',
-  },
-  {
-    name: 'RabbitMQ',
-    url: 'https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white',
-  },
-  {
-    name: 'Python',
-    url: 'https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white',
-  },
-  {
-    name: 'PostgreSQL',
-    url: 'https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white',
-  },
-  {
-    name: 'MongoDB',
-    url: 'https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white',
-  },
-  {
-    name: 'Docker',
-    url: 'https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white',
-  },
-  {
-    name: 'CI/CD',
-    url: 'https://img.shields.io/badge/CI/CD-FFB13B?style=for-the-badge&logo=github-actions&logoColor=white',
-  },
-]
-
 export function BusinessCard(): JSX.Element {
+  const badges: Array<{ name: string; url: string }> = [
+    {
+      name: 'React',
+      url: 'https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black',
+    },
+    {
+      name: 'TypeScript',
+      url: 'https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white',
+    },
+    {
+      name: 'TailwindCSS',
+      url: 'https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white',
+    },
+    {
+      name: 'Shadcn',
+      url: 'https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white',
+    },
+    {
+      name: 'Node.js',
+      url: 'https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white',
+    },
+    {
+      name: 'NestJS',
+      url: 'https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white',
+    },
+    {
+      name: 'Go',
+      url: 'https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white',
+    },
+    {
+      name: 'RabbitMQ',
+      url: 'https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white',
+    },
+    {
+      name: 'Python',
+      url: 'https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white',
+    },
+    {
+      name: 'PostgreSQL',
+      url: 'https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white',
+    },
+    {
+      name: 'MongoDB',
+      url: 'https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white',
+    },
+    {
+      name: 'Docker',
+      url: 'https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white',
+    },
+    {
+      name: 'CI/CD',
+      url: 'https://img.shields.io/badge/CI/CD-FFB13B?style=for-the-badge&logo=github-actions&logoColor=white',
+    },
+  ]
+
+  const localBadges: Array<{ name: string; url: string }> = [
+    {
+      name: 'React',
+      url: '/assets/badges/react.png',
+    },
+    {
+      name: 'TypeScript',
+      url: '/assets/badges/typescript.png',
+    },
+    {
+      name: 'TailwindCSS',
+      url: '/assets/badges/tailwindcss.png',
+    },
+    {
+      name: 'Shadcn',
+      url: '/assets/badges/shadcn.png',
+    },
+    {
+      name: 'Node.js',
+      url: '/assets/badges/node.png',
+    },
+    {
+      name: 'NestJS',
+      url: '/assets/badges/nestjs.png',
+    },
+    {
+      name: 'Go',
+      url: '/assets/badges/go.png',
+    },
+    {
+      name: 'RabbitMQ',
+      url: '/assets/badges/rabbitmq.png',
+    },
+    {
+      name: 'Python',
+      url: '/assets/badges/python.png',
+    },
+    {
+      name: 'PostgreSQL',
+      url: '/assets/badges/postgresql.png',
+    },
+    {
+      name: 'MongoDB',
+      url: '/assets/badges/mongodb.png',
+    },
+    {
+      name: 'Docker',
+      url: '/assets/badges/docker.png',
+    },
+    {
+      name: 'CI/CD',
+      url: '/assets/badges/cicd.png',
+    },
+  ]
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-[#0d1117] p-4 font-sans">
       <div className="w-full max-w-lg rounded-2xl border border-gray-700 bg-[#161b22] p-8 shadow-2xl transition-all hover:border-teal-500/50">
@@ -125,6 +182,19 @@ export function BusinessCard(): JSX.Element {
             </span>
             .
           </p>
+        </div>
+
+        {/* PDF Download Link */}
+        <div className="mt-6 flex justify-center">
+          <PDFDownloadLink
+            document={<BusinessCardPDF badges={localBadges} />}
+            fileName="Heric_Rodrigues_Card.pdf"
+            className="rounded-full bg-teal-500 px-6 py-2 text-sm font-bold text-[#0d1117] transition-transform hover:scale-105"
+          >
+            {({ loading }) =>
+              loading ? 'Creating PDF...' : 'Download PDF card'
+            }
+          </PDFDownloadLink>
         </div>
       </div>
     </div>
