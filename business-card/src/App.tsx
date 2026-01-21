@@ -1,5 +1,5 @@
-function App() {
-  return <></>;
-}
+import { BusinessCard } from "./components/BusinessCard";
 
-export default App;
+export default function App() {
+  return <BusinessCard />;
+}
